@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import time
 from datetime import datetime
-from matplotlib import pyplot as plt 
+
 from bokeh.plotting import figure
 from PIL import Image
 
@@ -22,15 +22,7 @@ st.sidebar.title('Scientific name: Felis catus')
 image = Image.open('C:\\Users\\raima\\Downloads\\cat-1.jpg')
 st.image(image,caption='One cat just leads to another.')
 
-st.subheader('How Cats Spend their Tax Refund')
-labels = 'Cat nips', 'Yarn'
-sizes = [60,70]
 
-fig1, ax1 = plt.subplots()
-ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
-         startangle=90)
-ax1.axis('equal')  
-st.pyplot(fig1)
 
 
 st.subheader('🥣Feeding Guidelines🥣')
