@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import time
 from datetime import datetime
+from matplotlib import pyplot as plt 
+from bokeh.plotting import figure
 from PIL import Image
 
 st.markdown('<style>description{color: grey;}</style>',unsafe_allow_html=True)
@@ -20,7 +22,15 @@ st.sidebar.title('Scientific name: Felis catus')
 image = Image.open('C:\\Users\\raima\\Downloads\\cat-1.jpg')
 st.image(image,caption='One cat just leads to another.')
 
+st.subheader('How Cats Spend their Tax Refund')
+labels = 'Cat nips', 'Yarn'
+sizes = [60,70]
 
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+         startangle=90)
+ax1.axis('equal')  
+st.pyplot(fig1)
 
 
 st.subheader('🥣Feeding Guidelines🥣')
@@ -75,6 +85,21 @@ age = st.slider('How many cats you want to adopt?', 0, 25)
 st.write("I want ", age, ' cats')
 
 
+
+st.subheader('Cat Lovers Through The Years')
+
+
+x = [2000, 2005, 2010, 2020, 2022]
+y = [3000, 2000, 5000, 4000, 7000]
+
+p = figure(
+    title='no of cat owners:',
+    x_axis_label='x',
+    y_axis_label='y')
+
+p.line(x, y, legend_label='Cat Owners', line_width=2)
+
+st.bokeh_chart(p, use_container_width=True)
 
 rat = st.slider('Do you love cats?', 0, 10, 5)
 st.write("I would rate it a", rat)
