@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 import time
 from datetime import datetime
-
-from bokeh.plotting import figure
 from PIL import Image
 
 st.markdown('<style>description{color: grey;}</style>',unsafe_allow_html=True)
@@ -77,21 +75,6 @@ age = st.slider('How many cats you want to adopt?', 0, 25)
 st.write("I want ", age, ' cats')
 
 
-
-st.subheader('Cat Lovers Through The Years')
-
-
-x = [2000, 2005, 2010, 2020, 2022]
-y = [3000, 2000, 5000, 4000, 7000]
-
-p = figure(
-    title='no of cat owners:',
-    x_axis_label='x',
-    y_axis_label='y')
-
-p.line(x, y, legend_label='Cat Owners', line_width=2)
-
-st.bokeh_chart(p, use_container_width=True)
 
 rat = st.slider('Do you love cats?', 0, 10, 5)
 st.write("I would rate it a", rat)
