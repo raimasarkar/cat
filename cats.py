@@ -103,7 +103,3 @@ st.bokeh_chart(p, use_container_width=True)
 
 rat = st.slider('Do you love cats?', 0, 10, 5)
 st.write("I would rate it a", rat)
-
-if(rat==10):
-    st.success('Congratulations!You are officially a Cat Guru now!', icon="✅")
-    
