@@ -19,7 +19,7 @@ st.sidebar.title('Lifespan: 12 – 18 years')
 st.sidebar.title('Height: 23 – 25 cm')
 st.sidebar.title('Scientific name: Felis catus')
 
-image = Image.open('C:\\Users\\raima\\Downloads\\cat-1.jpg')
+image = Image.open('c1.jpg')
 st.image(image,caption='One cat just leads to another.')
 
 st.subheader('How Cats Spend their Tax Refund')
@@ -39,7 +39,7 @@ l=[['1-2 Kg','15-30 G'],['2-3 Kg','30-45 G'],['3-4 Kg','45-60 G'],['4-5 Kg','60-
 df=pd.DataFrame(l,columns=['BODY WEIGHT','FEEDING AMOUNT/DAY'],index=['','','',''])
 st.table(df)
 
-image = Image.open('C:\\Users\\raima\\Downloads\\cat-2.jpg')
+image = Image.open('c2.jpg')
 st.image(image,caption='We recommend feeding them atleast once in 3 hours if its still a baby.')
 
 st.subheader('Should I get a Cat?')
@@ -65,18 +65,18 @@ genre = st.radio(
 
 if genre == 'Siberian cat':
     st.write('The Siberian is a centuries-old landrace of domestic cat in Russia and recently developed as a formal breed with standards promulgated the world over since the late 1980s. Siberians vary from medium to medium-large in size.')
-    image = Image.open('C:\\Users\\raima\\Downloads\\cat3.jpg')
+    image = Image.open('c3.jpg')
     st.image(image)
 
 
 if genre == 'Persian cat':
     st.write('The Persian cat, also known as the Persian longhair, is a long-haired breed of cat characterized by a round face and short muzzle. The first documented ancestors of Persian cats were imported into Italy from Persia around 1620.')
-    image = Image.open('C:\\Users\\raima\\Downloads\\cat4.jpg')
+    image = Image.open('c4.jpg')
     st.image(image)
 
 if genre == 'British Shorthair':
     st.write('The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, dense coat, and broad face. The most familiar colour variant is the "British Blue", with a solid grey-blue coat, orange eyes, and a medium-sized tail.')
-    image = Image.open('C:\\Users\\raima\\Downloads\\cat5.jpg')
+    image = Image.open('c5.jpg')
     st.image(image)
 
 
