@@ -14,3 +14,4 @@ umap-learn==0.5.3
 wordcloud==1.8.2.2
 bokeh
 image
+gsheetsdb
